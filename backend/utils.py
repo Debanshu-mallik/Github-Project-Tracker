@@ -23,3 +23,13 @@ def calculate_duration(commits):
         "days_taken": (end - start).days + 1
         
     }
+
+
+def commits_per_week(commits,start_date,end_date):
+    if not commits:
+        return 0
+        
+    
+    days = (end_date - start_date).days +1
+    weeks = max(days/7,1)
+    return round(len(commits)/weeks,2)

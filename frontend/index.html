@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>GitHub Project Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>GitHub Project Tracker</h1>
+
+  <!-- Metrics -->
+  <div id="metrics" class="metrics-container"></div>
+
+  <!-- Filters (Phase 2B will expand this) -->
+  <input type="text" id="search" placeholder="Search repository..." />
+  
+  
+  <div class="filters">
+    <select id="statusFilter">
+      <option value="">All Status</option>
+      <option value="Active">Active</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Stale">Stale</option>
+    </select>
+    
+    <select id="durationFilter">
+      <option value="">All Durations</option>
+      <option value="short">0–7 days</option>
+      <option value="medium">8–30 days</option>
+      <option value="long">31+ days</option>
+    </select>
+    
+    <select id="languageFilter">
+      <option value="">All Languages</option>
+    </select>
+  </div> 
+  
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Repository</th>
+        <th>Status</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Days</th>
+        <th>Progress</th>
+      </tr>
+    </thead>
+    <tbody id="project-table"></tbody>
+  </table>
+
+  <!-- Repo Detail Drawer -->
+  <div id="drawer" class="drawer hidden"></div>
+
+  <script src="script.js"></script>
+</body>

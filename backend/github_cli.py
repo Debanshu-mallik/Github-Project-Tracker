@@ -24,3 +24,10 @@ def get_commits(owner, repo):
     response = requests.get(url, headers=get_headers())
     response.raise_for_status()
     return response.json()
+    
+    
+def get_repo_details(owner, repo):
+    url = f"{GITHUB_API}/repos/{owner}/{repo}"
+    response= requests.get(url, headers=get_headers())
+    response.raise_for_status()
+    return response.json()
